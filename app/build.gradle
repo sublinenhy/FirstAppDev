@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.camden.greenhandproject"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,10 +26,22 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    //firebase
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    //firebase database
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    //firebase authentication
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+
     // 基础依赖包，必须要依赖
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta04'
 // fragment快速实现（可选）
     implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta04'
 
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+
 }
+
+
+//firebase
+apply plugin: 'com.google.gms.google-services'

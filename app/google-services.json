@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "35490796594",
+    "firebase_url": "https://androiddev-1b4f6.firebaseio.com",
+    "project_id": "androiddev-1b4f6",
+    "storage_bucket": "androiddev-1b4f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35490796594:android:d9557dc9067d60f3",
+        "android_client_info": {
+          "package_name": "com.example.camden.greenhandproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35490796594-umukb6ogh92euo1uil5lrjl5vummor7s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBng1k5LplXuuFtA4OZvuqFmPpBQo8HffM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35490796594-umukb6ogh92euo1uil5lrjl5vummor7s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
