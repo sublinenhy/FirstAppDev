@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     private NoteDatabaseHelper dbHelper;
     private LinkedList<NoteBean> notes;
     private static final String TAG = "MainActivity";
+    private FirebaseAuth mAuth;
+
 
 
 
@@ -61,12 +65,26 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter mAdapter = new MyAdapter();
         mRecyclerView.setAdapter(mAdapter);
 
+        mAuth = FirebaseAuth.getInstance();
+
 
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
 
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser == null){
 
+            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+            finish();
+
+        }
+
+    }
 
     public void toEdit(View view) {
 
